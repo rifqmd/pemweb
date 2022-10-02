@@ -1,7 +1,7 @@
 <?php
-    // memanggil file koneksi dan file proses
-    require_once 'koneksi.php';
-    // include_once 'koneksi.php';
+// memanggil file koneksi dan file proses
+require_once 'koneksi.php';
+// include_once 'koneksi.php';
 ?>
 
 <!DOCTYPE html>
@@ -61,15 +61,15 @@
                 <tr>ID</tr>
                 <tr>Nama Lengkap</tr>
                 <tr>Jurusan</tr>
-                <tr>Aksi</tr>
+                <tr>Aksiiii</tr>
             </thead>
             <tbody>
                 <?php
-                    $querySQL = "SELECT * from pendaftaran";
-                    $execSQL = mysqli_query($koneksi, $querySQL);
+                $querySQL = "SELECT * from pendaftaran";
+                $execSQL = mysqli_query($koneksi, $querySQL);
 
-                    // CEK DATA
-                    
+                // CEK DATA
+
                 ?>
             </tbody>
         </table>
