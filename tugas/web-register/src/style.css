@@ -1,0 +1,63 @@
+:root {
+    --colors-navy-2: #005a8d;
+}
+
+a {
+    /* menghilangkan underline pada link / tag <a> */
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* = NAVBAR = */
+
+.navbar {
+    background-color: var(--colors-navy-2);
+}
+.btn-group {
+    top: 0;
+    margin-left: -1px;
+    padding: 1px 5px;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 649px;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+/* = BUTTON = */
+
+.lihat-detail__button {
+    /* background-color: #E08F1D; */
+    color: black;
+    --color: #8fc866;
+    --hover: #e08f1d;
+    background: none;
+    border: 2px solid;
+    line-height: 1;
+    margin: 0.5em;
+}
+
+.lihat-detail__button:hover,
+.lihat-detail__button:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.card-body {
+    background-color: #f4f4f4;
+}
+
+.program-class {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+/* .breadcrumb-body {
+    background-color: #005a8d;
+} */
