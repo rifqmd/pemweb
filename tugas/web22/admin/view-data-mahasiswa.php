@@ -8,7 +8,9 @@
     <title>Data Mahasiswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -19,26 +21,30 @@
 
     <div class="container-fluid mt-03">
         <h3>List Data User</h3>
-        
-        <button type="button" class="btn btn-primary m-2 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Input Data</button>
-        
-        
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Registrasi</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form action="simpan-data-all.php" method="POST">
+
+        <button type="button" class="btn btn-primary m-2 mb-3" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Input Data</button>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrasi</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="simpan-data-all.php" method="POST">
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Nama <var style="color: red;">*</var> :</label>
+                                <label for="recipient-name" class="col-form-label">Nama <var style="color: red;">*</var>
+                                    :</label>
                                 <input type="text" class="form-control" id="nama">
                             </div>
                             <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Jurusan <var style="color: red;">*</var> :</label>
-                                <select class="form-select" name="jurusan" id="jurusan" aria-label="Default select example">
+                                <label for="recipient-name" class="col-form-label">Jurusan <var
+                                        style="color: red;">*</var> :</label>
+                                <select class="form-select" name="jurusan" id="jurusan"
+                                    aria-label="Default select example">
                                     <option selected>Pilih jurusan</option>
                                     <option value="Informatika">Informatika</option>
                                     <option value="Sistem Informasi">Sistem Informasi</option>
@@ -46,7 +52,8 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Angkatan <var style="color: red;">*</var> :</label>
+                                <label for="recipient-name" class="col-form-label">Angkatan <var
+                                        style="color: red;">*</var> :</label>
                                 <input type="text" class="form-control" id="angkatan">
                             </div>
                         </div>
@@ -54,10 +61,10 @@
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
+        </div>
 
         <?php
 
@@ -118,26 +125,26 @@
                         $jurusan = $row['jurusan'];
                         $tahun = $row['tahun'];
                 ?>
-                        <tr>
-                            <td>
-                                <a href="view-detail-angkatan.php?id=<?php echo $id; ?>">
-                                    <?php echo $id; ?>
-                                </a>
-                            </td>
-                            <td><?php echo $nama; ?></td>
-                            <td><?php echo $jurusan; ?></td>
-                            <td><?php echo $tahun; ?></td>
-                            <td>
-                                <!-- edit angkatan -->
-                                <a href="edit-angkatan.php?id=<?php echo $id; ?>" class="btn btn-success">
-                                    <i class="fa-solid fa-pen"></i>
-                                    Edit Data</a>
-                                <!-- delete angkatan -->
-                                <a href="delete_angkatan.php?id=<?php echo $id; ?>" class="btn btn-danger">
-                                    <i class="fa-solid fa-trash"></i>
-                                    Delete</a>
-                            </td>
-                        </tr>
+                <tr>
+                    <td>
+                        <a href="view-detail-mahasiswa.php?id=<?php echo $id; ?>">
+                            <?php echo $id; ?>
+                        </a>
+                    </td>
+                    <td><?php echo $nama; ?></td>
+                    <td><?php echo $jurusan; ?></td>
+                    <td><?php echo $tahun; ?></td>
+                    <td>
+                        <!-- edit angkatan -->
+                        <a href="edit-angkatan.php?id=<?php echo $id; ?>" class="btn btn-success">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit Data</a>
+                        <!-- delete angkatan -->
+                        <a href="delete_angkatan.php?id=<?php echo $id; ?>" class="btn btn-danger">
+                            <i class="fa-solid fa-trash"></i>
+                            Delete</a>
+                    </td>
+                </tr>
                 <?php
                     }
                 }
@@ -151,9 +158,9 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#list-table').DataTable();
-        });
+    $(document).ready(function() {
+        $('#list-table').DataTable();
+    });
     </script>
 
 </body>
