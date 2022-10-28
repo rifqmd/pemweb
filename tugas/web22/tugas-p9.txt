@@ -1,0 +1,5 @@
+1. Buat CRUD pada template admin. 
+2. Tambahkan 10 data berita
+3. Buat file artikel.php isinya, jika di klik "selengkapnya" pada berita di halaman blog maka menuju ke link artikel.php? id=xxx
+4. Pada halaman blog, lengkapi about dan link (data dari database) 
+5. Pada halaman blog, buat cari berita sehingga ketika di klik tombol cari, maka akan masuk ke halaman cariberita. php
